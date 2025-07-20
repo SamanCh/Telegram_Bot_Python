@@ -1,31 +1,44 @@
-# Telegram Bot Notify For Long Running Codes
- The Telegram Bots API is an excellent tool for tell when is the cell or code finished running by using the Telegram API library of Python.
-#### To be able to use it, you just need to get your API token (which is extremely simple to get), add a few lines of code to your notebook, and execute it at the end of your job.
+# 🔔 Telegram Bot Notifier for Long-Running Code
 
-## How to get Telegram bot API token:
+Tired of waiting around for your code to finish running? Get a Telegram notification when it’s done — straight to your phone, no refreshing required.
 
-In this tutorial we will look at a quick way to create a bot on Telegram.
+This simple Python script uses the **Telegram Bot API** to notify you once your long-running task or notebook cell finishes execution.
 
-## Set up your Telegram bot:
+---
 
-You don't have to write any code for this. Actually, you don't have to use your computer or mobile phone! Just go to the Telegram app on your device complete 4 simple step:
+## 🚀 Quick Setup
 
-- Step 1. Find telegram bot named "@botfarther", he will help you with creating and managing your bot.
+### 1. Create Your Telegram Bot
 
-- Step 2. Print “/help” and you will see all possible commands that the botfather can operate.
+No coding needed — just follow these easy steps inside the Telegram app:
 
-- Step 3. To create a new bot type “/newbot” or click on it.
+1. **Open Telegram** and search for **[@BotFather](https://t.me/BotFather)**.
+2. Send `/newbot` and follow the prompts to:
+   - Choose a name and username (e.g. `MyNotifyBot`)
+   - Get your **API Token** (you’ll need this later)
+3. Save your token somewhere safe!
 
-Follow instructions he given and create a new name to your bot. If you are making a bot only for experimentation, as it has to be a unique name, you can use namespace your bot by placing your name before it in its username. By the way, its screen name can be anything you like.
+> 💡 Tip: You can get help anytime by sending `/help` to BotFather.
 
-- Step 4. Congratulations! You've just created your Telegram bot. You will see a new API token generated for it.
+---
 
-Copy your API token to the Code.
+### 2. Get Your Chat ID
 
-Finally, find your bot by searching the name you gave it and click start.
+1. Search for **[@userinfobot](https://t.me/userinfobot)** in Telegram.
+2. Send it any message — it will reply with your **User ID** (aka Chat ID).
 
-- Next step is to find your Chat ID:
+---
 
-Find telegram bot named "@userinfobot", and sending any message to this bot will give your User Chat ID
+### 3. Plug It into Your Code
 
-Copy the token and chat id to the code and place it at the end of your code. thats it
+Add this snippet to the end of your Python script or notebook:
+
+```python
+from telegram import Bot
+
+# Replace with your own token and chat ID
+TOKEN = "YOUR_TELEGRAM_BOT_API_TOKEN"
+CHAT_ID = "YOUR_CHAT_ID"
+
+bot = Bot(token=TOKEN)
+bot.send_message(chat_id=CHAT_ID, text="✅ Your code has finished running!")
