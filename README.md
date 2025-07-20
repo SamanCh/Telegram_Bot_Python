@@ -1,5 +1,5 @@
 # Telegram Bot Notify For Long Running Codes
-### The Telegram Bots API is an excellent tool for tell when is the cell or code finished running by using the Telegram API library of Python.
+ The Telegram Bots API is an excellent tool for tell when is the cell or code finished running by using the Telegram API library of Python.
 #### To be able to use it, you just need to get your API token (which is extremely simple to get), add a few lines of code to your notebook, and execute it at the end of your job.
 
 ## How to get Telegram bot API token:
