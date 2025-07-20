@@ -31,14 +31,4 @@ No coding needed — just follow these easy steps inside the Telegram app:
 
 ### 3. Plug It into Your Code
 
-Add this snippet to the end of your Python script or notebook:
-
-```python
-from telegram import Bot
-
-# Replace with your own token and chat ID
-TOKEN = "YOUR_TELEGRAM_BOT_API_TOKEN"
-CHAT_ID = "YOUR_CHAT_ID"
-
-bot = Bot(token=TOKEN)
-bot.send_message(chat_id=CHAT_ID, text="✅ Your code has finished running!")
+Add the code snippet to the end of your Python script or notebook
